@@ -1,0 +1,25 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #fcfcfc;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #404969;
+    font-size: 3em;
+}
+
+.accent {
+    color: #FF895D;
+}
+
+.main-nav-item {
+    list-style: none;
+}
