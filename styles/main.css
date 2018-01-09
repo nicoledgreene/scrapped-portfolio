@@ -3,6 +3,68 @@ body {
     background-color: #fcfcfc; 
 }
 
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+}
+
+.hero {
+    font-family: 'Cormorant';
+    display: flex;
+    flex-direction: column;
+}
+
+#he-1 {
+    text-indent: 5%;
+}
+
+#he-2 {
+    text-indent: 25%;
+}
+
+#he-3 {
+    text-indent: 60%;
+}
+
+#he-4 {
+    text-indent: 50%;
+}
+
+#he-5 {
+    text-indent: 30%;
+}
+
+#he-6 {
+    text-indent: 20%;
+}
+
 .work {
-    height: 2000px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    width: 50%;
+    height: 100px;
+}
+
+.img {
+    background-color: #1b435d;
+}
+
+.desc {
+    background-color: #e2eff1;
 }
