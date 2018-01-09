@@ -1,6 +1,8 @@
 body {
     font-family: 'Rubik', sans-serif;
-    background-color: #fcfcfc; 
+    background-color: #fcfcfc;
+    height: 100%;
+    overflow: auto;
 }
 
 .container {
@@ -11,7 +13,6 @@ body {
 }
 
 .main-section {
-    position: fixed;
     top: 100px;
     width: 100%;
 }
@@ -58,13 +59,22 @@ body {
 
 .box {
     width: 50%;
-    height: 100px;
+    height: 400px;
 }
 
-.img {
-    background-color: #1b435d;
+.img-1 {
+    background-image: './images/quiz-app.png';
+}
+
+.img-2 {
+    background-image: './images/small-council.png';
 }
 
 .desc {
     background-color: #e2eff1;
+}
+
+#foot {
+    height: 100px;
+    background-color: red;
 }

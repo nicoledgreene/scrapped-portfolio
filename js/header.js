@@ -1,13 +1,13 @@
 /* global $ */
 'use strict';
 
-const wrapperNode = document.getElementById('wrapper');
-const scrollDownNode = document.querySelector('.scroll-down');
-const linkNodes = document.querySelector('.links');
+const wrapperNode = document.getElementById('head-wrapper');
+// const scrollDownNode = document.querySelector('.scroll-down');
+const footerNode =  document.querySelector('.foot');
 
 const vh = window.innerHeight;
 
-const fin = wrapperNode.clientHeight - vh + linkNodes.clientHeight;
+var fin = wrapperNode.clientHeight - vh + footerNode.clientHeight;
 
 function calculateAnimations() {
   return [
@@ -30,7 +30,7 @@ function calculateAnimations() {
     { range: [-1, fin * 0.5],   selector: '.t', type: 'scale', style: 'transform:translateY', from: 0, to: 25, unit: 'px' },
     { range: [fin * 0.5, fin],  selector: '.t', type: 'scale', style: 'transform:translateY', from: 25, to: 0, unit: 'px' },
     { range: [fin * 0.4, fin],  selector: '.t', type: 'change', style: 'color', to: '#ffb515' },
-  ]
+  ];
 
 
 }
@@ -43,7 +43,7 @@ let choreographer = new Choreographer({
       let hex = '#';
 
       while (hex.length < 7) {
-        hex += chars[Math.round(Math.random() * (chars.length - 1))]
+        hex += chars[Math.round(Math.random() * (chars.length - 1))];
       }
 
       data.node.style.color = hex;
@@ -52,35 +52,15 @@ let choreographer = new Choreographer({
 });
 
 function animate() {
-  let scrollPosition = (wrapperNode.getBoundingClientRect().top - wrapperNode.offsetTop) * -1
+  console.log('scrolling');
+  let scrollPosition = (wrapperNode.getBoundingClientRect().top - wrapperNode.offsetTop) * -1;
   choreographer.runAnimationsAt(scrollPosition);
 }
 
-document.body.addEventListener('scroll', animate);
+window.addEventListener('scroll', animate);
 
-animate();
+// animate();
 
 window.addEventListener('resize', function() {
   choreographer.updateAnimations(calculateAnimations());
 });
-
-
-// function createString(input){
-//   $(input).each(function(){
-//     let myStr = $(this).html();
-//     myStr = myStr.split('');
-    
-//     let contents = '';
-//     for (let i = 0, len = myStr.length; i < len; i++) {
-//       contents += '<span class="single-char char-' + i + '">' + myStr[i] + '</span>';
-//     }
-//     $(input).html(contents);
-//   });
-// }
-
-// $('document').ready(function() {
-//   let myHeader = $('#main-header');
-//   createString(myHeader);
-//   $('.char-3').addClass('accent');
-//   $('.char-11').addClass('accent');
-// });
