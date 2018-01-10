@@ -36,30 +36,6 @@ h1 {
     position: relative;
 }
 
-/* .accent {
-    color: #FF895D;
-} */
-
 .main-nav-item {
     list-style: none;
 }
-/* 
-.scroll-down {
-    width: 100%;
-    position: fixed;
-    top: 100px;
-    text-align: center;
-}
-  
-.down-arrow {
-  width: 30px;
-  height: 30px;
-  
-  display: inline-block;
-  margin-top: -15px;
-  opacity: 0.3;
-  
-  transform: rotateZ(45deg);
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-} */

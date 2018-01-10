@@ -1,15 +1,19 @@
-/* global $ */
 'use strict';
 
-const wrapperNode = document.getElementById('head-wrapper');
-// const scrollDownNode = document.querySelector('.scroll-down');
-const footerNode =  document.querySelector('.foot');
+var wrapperNode = document.getElementById('wrapper');
+var footerNode = document.querySelector('.footer');
 
-const vh = window.innerHeight;
+var vh = window.innerHeight;
 
+/* STORE SOME KEY LOCATIONS */
+
+/* ~ le fin ~
+ * The point where you cannot scroll down any further.
+ */
 var fin = wrapperNode.clientHeight - vh + footerNode.clientHeight;
 
 function calculateAnimations() {
+  console.log('calc animations');
   return [
     { range: [-1, fin * 0.5],   selectors: ['.g', '.n'], type: 'scale', style: 'transform:rotateZ', from: 0, to: 180, unit: 'deg' },
     { range: [fin * 0.5, fin],  selectors: ['.g', '.n'], type: 'scale', style: 'transform:rotateZ', from: 180, to: 360, unit: 'deg' },
@@ -29,21 +33,20 @@ function calculateAnimations() {
   
     { range: [-1, fin * 0.5],   selector: '.t', type: 'scale', style: 'transform:translateY', from: 0, to: 25, unit: 'px' },
     { range: [fin * 0.5, fin],  selector: '.t', type: 'scale', style: 'transform:translateY', from: 25, to: 0, unit: 'px' },
-    { range: [fin * 0.4, fin],  selector: '.t', type: 'change', style: 'color', to: '#ffb515' },
+    { range: [fin * 0.4, fin],  selector: '.t', type: 'change', style: 'color', to: '#ffb515' }
   ];
-
-
 }
 
-let choreographer = new Choreographer({
+// Instantiate choreographer.
+var choreographer = new Choreographer({
   animations: calculateAnimations(),
   customFunctions: {
     randomizeColor: function(data) {
-      let chars = '0123456789abcdef'.split('');
-      let hex = '#';
+      var chars = '0123456789abcdef'.split('');
+      var hex = '#';
 
       while (hex.length < 7) {
-        hex += chars[Math.round(Math.random() * (chars.length - 1))];
+        hex += chars[Math.round(Math.random() * (chars.length - 1))]
       }
 
       data.node.style.color = hex;
@@ -52,14 +55,14 @@ let choreographer = new Choreographer({
 });
 
 function animate() {
-  console.log('scrolling');
-  let scrollPosition = (wrapperNode.getBoundingClientRect().top - wrapperNode.offsetTop) * -1;
+  console.log('animate');
+  var scrollPosition = (wrapperNode.getBoundingClientRect().top - wrapperNode.offsetTop) * -1;
   choreographer.runAnimationsAt(scrollPosition);
 }
 
-window.addEventListener('scroll', animate);
+document.body.addEventListener('scroll', animate);
 
-// animate();
+animate();
 
 window.addEventListener('resize', function() {
   choreographer.updateAnimations(calculateAnimations());
