@@ -1,164 +1,100 @@
 html {
     height: 100%;
+    overflow: hidden;
     margin: 0 0;
-}
-  
+  }
+
 body {
-    height: 100%;
-    margin: 0 0;
     font-family: 'Rubik', sans-serif;
     background-color: #fcfcfc;
-}
-  
-/* ::-webkit-scrollbar { display: none; } */
-  
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fcfcfc;
-    width: 100vw;
-    height: 10vh;
+    height: 100%;
+    overflow: auto;
+    margin: 0 0;
 }
 
-p {
-    font-size: 13px;
-    letter-spacing: 0.05em;
-}
-  
-a { text-decoration: none; }
-  
-#wrapper {
-    height: 400vh;
+.container {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
-  
-.scroll-overlay {
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    position: relative;
-}
-  
-#letters {
-    position: fixed;
-    text-align: center;
-    top: 0;
+
+.main-section {
+    top: 100px;
     width: 100%;
 }
-  
-#letters div {
-    display: inline-block;
-    font-size: 50px;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-family: 'Rubik', sans-serif;
-    transition: color 0.1s ease-in-out;
+
+.hero {
+    font-family: 'Cormorant';
+    display: flex;
+    flex-direction: column;
 }
-  
-#letters .o {
-    transition: none;
+
+#he-1 {
+    text-indent: 5%;
 }
-  
-#letters .line {
-    border-bottom-width: 8px;
-    border-bottom-style: solid;
-    border-color: #ff7474;
-    width: 0.01%;
-  
-    opacity: 0;
+
+#he-2 {
+    text-indent: 25%;
 }
-  
-.footer {
-    height: calc(100vh - 420px);
-    text-align: center;
+
+#he-3 {
+    text-indent: 60%;
+}
+
+#he-4 {
+    text-indent: 50%;
+}
+
+#he-5 {
+    text-indent: 30%;
+}
+
+#he-6 {
+    text-indent: 20%;
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    width: 50%;
+    height: 400px;
+}
+
+.img-4 {
+    background-image: './images/quiz-app.png';
+}
+
+.img-3 {
+    background-image: './images/small-council.png';
+}
+
+.img-2 {
+    background-image: './images/word-cloud.png';
+}
+
+.img-1 {
+    background-color: 
+}
+
+.desc {
+    background-color: #e2eff1;
+}
+
+#foot {
+    height: 100px;
     background-color: red;
 }
-  
-/* .links .quickstart {
-    font-family: 'Inconsolata', monospace;
-    background-color: #080808;
-    color: white;
-    padding: 20px;
-    display: inline-block;
-    margin: 0 auto;
-    border-radius: 5px;
-}
-  
-.links button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: #aaa;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-  
-.links button:hover {
-    background-color: #95cc21;
-} */
-  
-/* .scroll-down {
-    width: 100%;
-    position: fixed;
-    top: 420px;
-    text-align: center;
-}
-  
-.scroll-down p {
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-  
-.down-arrow {
-    width: 30px;
-    height: 30px;
-  
-    display: inline-block;
-    margin-top: -15px;
-    opacity: 0.3;
-  
-    transform: rotateZ(45deg);
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-} */
 
-
-/* beginning of my css */
-.main-section {
-    height: 400vh;
-}
-
-
-  
-@media (max-width:660px) {
-    #letters div {
-      font-size: 38px;
-    }
+::-webkit-scrollbar {
+    display: none;
   }
-  
-@media (max-width:500px) {
-    #letters { top: 180px; }
-  
-    #letters div { font-size: 20px; }
-    #letters .line { display: none; }
-    #letters .description { padding: 20px; }
-  
-    .links { height: calc(100vh - 300px); }
-  
-    .links .quickstart {
-      padding: 10px;
-      font-size: 12px;
-    }
-  
-    .scroll-down { top: 300px; }
-}
   
