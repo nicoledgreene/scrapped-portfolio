@@ -13,6 +13,7 @@ header {
     font-weight: 300;
     color: #404969;
     transition: color 0.1s ease-in-out;
+    text-transform: uppercase;
 }
 
 #letters {
@@ -26,13 +27,9 @@ header {
     transition: none;
 }
 
-#letters .line {
-    border-bottom-width: 8px;
-    border-bottom-style: solid;
-    border-color: #FF895D;
-    width: 0.01%;
-    opacity: 0;
-  }
+.accent {
+    color: #FF895D;
+}
 
 .main-nav-item {
     list-style: none;
