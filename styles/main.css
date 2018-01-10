@@ -1,8 +1,15 @@
+html {
+    height: 100%;
+    overflow: hidden;
+    margin: 0 0;
+  }
+
 body {
     font-family: 'Rubik', sans-serif;
     background-color: #fcfcfc;
     height: 100%;
     overflow: auto;
+    margin: 0 0;
 }
 
 .container {
@@ -62,12 +69,20 @@ body {
     height: 400px;
 }
 
-.img-1 {
+.img-4 {
     background-image: './images/quiz-app.png';
 }
 
-.img-2 {
+.img-3 {
     background-image: './images/small-council.png';
+}
+
+.img-2 {
+    background-image: './images/word-cloud.png';
+}
+
+.img-1 {
+    background-color: 
 }
 
 .desc {
@@ -78,3 +93,8 @@ body {
     height: 100px;
     background-color: red;
 }
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  

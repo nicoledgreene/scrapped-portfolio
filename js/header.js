@@ -2,7 +2,6 @@
 'use strict';
 
 const wrapperNode = document.getElementById('head-wrapper');
-// const scrollDownNode = document.querySelector('.scroll-down');
 const footerNode =  document.querySelector('.foot');
 
 const vh = window.innerHeight;
